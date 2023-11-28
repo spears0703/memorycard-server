@@ -21,8 +21,12 @@ public class CardPackageServiceImpl implements CardPackageService {
 
 	@Override
 	public CardPackage getCardPackage(Long id) {
-//		return cardPackageRepository.findById(id);
-		return null;
+		return cardPackageRepository.findById(id).orElse(new CardPackage());
+	}
+
+	@Override
+	public void saveCardPacakge(CardPackage cardPackage) {
+		cardPackageRepository.save(cardPackage);
 	}
 
 }

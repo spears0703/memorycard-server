@@ -3,6 +3,7 @@ package io.cahlee.memorycard.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -19,7 +20,7 @@ public class CardPackage {
 	@GeneratedValue
 	private Long id;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Card> card = new ArrayList<>();
 	
 	private String name; 

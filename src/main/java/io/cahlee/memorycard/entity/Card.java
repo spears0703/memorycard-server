@@ -3,7 +3,6 @@ package io.cahlee.memorycard.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,8 +20,5 @@ public class Card {
 	private String back;
 	
 	private boolean memorized = false;
-	
-	@ManyToOne
-	private CardPackage cardPackage;
 	
 }

@@ -10,4 +10,6 @@ public interface CardPackageService {
 
 	CardPackage getCardPackage(Long id);
 
+	void saveCardPacakge(CardPackage cardPackage);
+
 }

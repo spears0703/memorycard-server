@@ -3,6 +3,8 @@ package io.cahlee.memorycard.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +26,11 @@ public class CardPackageController {
 	@GetMapping(value="/card-package/{id}")
 	public CardPackage getCardPackage(@RequestParam Long id) {
 		return cardPackageService.getCardPackage(id);
+	}
+	
+	@PostMapping(value="/card-pacakge")
+	public void postCardpackage(@RequestBody CardPackage cardPackage) {
+		cardPackageService.saveCardPacakge(cardPackage);
 	}
 
 }
