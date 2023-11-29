@@ -21,4 +21,13 @@ public class Card {
 	
 	private boolean memorized = false;
 	
+	public Card() {
+		
+	}
+	
+	public Card(String front, String back) {
+		this.front = front;
+		this.back = back;
+	}
+	
 }
